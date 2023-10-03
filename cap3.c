@@ -235,18 +235,15 @@ void main() {
 
 #include <stdio.h>
 
-// Variáveis globais para armazenar os resultados das operações
 int soma_resultado = 0;
 int diferenca_resultado = 0;
 int produto_resultado = 1; // Inicializado com 1 para não afetar a multiplicação
 float divisao_resultado = 0.0;
 
-// Função para calcular a soma dos números
 void calcularSoma(int valor) {
     soma_resultado += valor;
 }
 
-// Função para calcular a diferença dos números
 void calcularDiferenca(int valor) {
     if (diferenca_resultado == 0) {
         diferenca_resultado = valor;
@@ -255,12 +252,10 @@ void calcularDiferenca(int valor) {
     }
 }
 
-// Função para calcular o produto dos números
 void calcularProduto(int valor) {
     produto_resultado *= valor;
 }
 
-// Função para realizar a divisão acumulativa por N
 void dividirPorN(int valor, int n) {
     if(n == 0) {
         divisao_resultado = valor;
@@ -284,14 +279,12 @@ int main() {
         calcularProduto(valor);
         dividirPorN(valor, i);
 
-        // Imprima os resultados parciais a cada valor inserido
         printf("Soma parcial: %d\n", soma_resultado);
         printf("Diferença parcial: %d\n", diferenca_resultado);
         printf("Produto parcial: %d\n", produto_resultado);
         printf("Divisão parcial: %.2f\n", divisao_resultado);
     }
 
-    // Imprima os resultados finais
     printf("Soma final: %d\n", soma_resultado);
     printf("Diferença final: %d\n", diferenca_resultado);
     printf("Produto final: %d\n", produto_resultado);
@@ -317,22 +310,18 @@ int main() {
 #ifdef aula3ex5
 #include <stdio.h>
 
-// Função para adição
 int somar(int a, int b) {
     return a + b;
 }
 
-// Função para subtração
 int subtrair(int a, int b) {
     return a - b;
 }
 
-// Função para multiplicação
 int multiplicar(int a, int b) {
     return a * b;
 }
 
-// Função para divisão
 float dividir(int a, int b) {
     if (b != 0) {
         return (float)a / b;
